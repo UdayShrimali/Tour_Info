@@ -6,7 +6,7 @@ import 'package:tour_info/goa.dart';
 import 'package:tour_info/helpcenter.dart';
 import 'package:tour_info/jaipur.dart';
 import 'package:tour_info/main.dart';
-import 'package:tour_info/mumbai/mumbaihome.dart';
+import 'package:tour_info/mumbaihome.dart';
 import 'package:tour_info/setting.dart';
 import 'package:tour_info/share.dart';
 
@@ -116,43 +116,43 @@ class _HomeState extends State<Home> {
                                   builder: (context) => JiapurHome()));
                             }else if(i == 6){
                               Navigator.push(context, MaterialPageRoute(
-                                  builder: (context) => MyHomePage(title: 'hey',)));
+                                  builder: (context) => MyHomePage()));
                             }else if(i == 7){
                               Navigator.push(context, MaterialPageRoute(
-                                  builder: (context) => MyHomePage(title: 'hey',)));
+                                  builder: (context) => MyHomePage()));
                             }else if(i == 8){
                               Navigator.push(context, MaterialPageRoute(
-                                  builder: (context) => MyHomePage(title: 'hey',)));
+                                  builder: (context) => MyHomePage()));
                             }else if(i == 9){
                               Navigator.push(context, MaterialPageRoute(
-                                  builder: (context) => MyHomePage(title: 'hey',)));
+                                  builder: (context) => MyHomePage()));
                             }else if(i == 10){
                               Navigator.push(context, MaterialPageRoute(
-                                  builder: (context) => MyHomePage(title: 'hey',)));
+                                  builder: (context) => MyHomePage()));
                             }else if(i == 11){
                               Navigator.push(context, MaterialPageRoute(
-                                  builder: (context) => MyHomePage(title: 'hey',)));
+                                  builder: (context) => MyHomePage()));
                             }else if(i == 12){
                               Navigator.push(context, MaterialPageRoute(
-                                  builder: (context) => MyHomePage(title: 'hey',)));
+                                  builder: (context) => MyHomePage()));
                             }else if(i == 13){
                               Navigator.push(context, MaterialPageRoute(
-                                  builder: (context) => MyHomePage(title: 'hey',)));
+                                  builder: (context) => MyHomePage()));
                             }else if(i == 14){
                               Navigator.push(context, MaterialPageRoute(
-                                  builder: (context) => MyHomePage(title: 'hey',)));
+                                  builder: (context) => MyHomePage()));
                             }else if(i == 15){
                               Navigator.push(context, MaterialPageRoute(
-                                  builder: (context) => MyHomePage(title: 'hey',)));
+                                  builder: (context) => MyHomePage()));
                             }else if(i == 16){
                               Navigator.push(context, MaterialPageRoute(
-                                  builder: (context) => MyHomePage(title: 'hey',)));
+                                  builder: (context) => MyHomePage()));
                             }else if(i == 17){
                               Navigator.push(context, MaterialPageRoute(
-                                  builder: (context) => MyHomePage(title: 'hey',)));
+                                  builder: (context) => MyHomePage()));
                             }else if(i ==  18){
                               Navigator.push(context, MaterialPageRoute(
-                                  builder: (context) => MyHomePage(title: 'hey',)));
+                                  builder: (context) => MyHomePage()));
                             };
                           },
                           splashColor: Colors.grey,
