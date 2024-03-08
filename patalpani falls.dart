@@ -1,0 +1,88 @@
+import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+// import 'package:carousel_pro/carousel_pro.dart';
+
+// import 'package:carousel_pro/carousel_pro.dart';
+
+
+class PatalpaniFalls extends StatefulWidget{
+  @override
+  State<PatalpaniFalls> createState() => _PatalpaniFallsState();
+}
+
+class _PatalpaniFallsState extends State<PatalpaniFalls> {
+  List<String> imageList = [
+    'assets/images/Varanasi.png',
+    'assets/images/Red Fort.png',
+    'assets/images/Akshardham Temple.png',
+
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return
+      Scaffold(
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          title: Text('Varanasi',textAlign: TextAlign.center,style: TextStyle(fontSize: 24,fontWeight: FontWeight.w700,color: Colors.deepPurple.shade500),
+          ),
+          actions: [Icon(FontAwesomeIcons.youtube,color: Colors.red,size: 30,),SizedBox(width: 10,),Padding(
+            padding: const EdgeInsets.only(right: 10),
+            child: Icon(Icons.location_on,size: 30,),
+          )
+          ],
+        ),
+        body: ListView(
+          children: [
+            Column(
+              children: [
+                Container(
+                  margin: EdgeInsets.all(15),
+                  child: CarouselSlider.builder(
+                    itemCount: imageList.length,
+                    options: CarouselOptions(
+                      enlargeCenterPage: true,
+                      height: 300,
+                      autoPlay: true,
+                      autoPlayInterval: Duration(seconds: 3),
+                      reverse: false,
+                      aspectRatio: 5.0,
+                    ),
+                    itemBuilder: (context, i, id){
+                      return Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            border: Border.all(color: Colors.white,)
+                        ),
+                        //ClipRRect for image border radius
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15),
+                          child: Image.asset(
+                            imageList[i],
+                            width: 800,
+                            fit: BoxFit.cover,
+                          ),
+
+                        ),
+
+
+                      );
+
+                    },
+                  ),
+
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text('Lying in the south of Uttar Pradesh, on the banks of the holy River Ganga, breathes Varanasi, which is believed  to be the  the oldest living city in the world. For centuries, the mystic of this place has been attracting pilgrims from across India as well as abroad. A dwelling of ancient domes, muths, ashrams, priests, narrow lanes with shops filled with Benaresi sarees, Varanasi represents the colorful and fascinating India of your dreams. With intimate rituals of life and death being parallelly performed on the Ghats, you’ll find it exhilarating to explore the religious geography of this city. Walk through the busy alleyways or watch the sunrise from a boat for an unforgettable experience. Trace the perimeter of the city, paying homage to shrines all the way. Who knows, a journey to this City of Light may turn out to be your favorite stop of all.\n\nThe north Indian city of Varanasi, or Benares, is regarded as sacred by Hindus, Buddhists and Jains. Situated in the fertile Ganga valley and on the banks of the Ganges, Varanasi is a place of pilgrimage for Hindus, who come to bathe in the holy river. Known as the City of Temples and a beacon of culture, Varanasi has produced many renowned writers. It’s also a centre of silk weaving, so practise haggling at the chaotic bazaar for some beautiful souvenirs. Rickshaws are the best way to get about.\n\nVaranasi is one of the oldest continuously inhabited cities in the world. It was one of the first major urban settlements in the middle Ganges valley. By the 2nd millennium BCE Varanasi was a seat of Vedic religion and philosophy and was also a commercial and industrial centre famous for its muslin and silk fabrics, perfumes, ivory works, and sculpture. ',style: TextStyle(fontSize: 15,fontWeight: FontWeight.w700),),
+                )
+
+              ],
+            ),
+          ],
+        ),
+
+      );
+  }
+}
+
